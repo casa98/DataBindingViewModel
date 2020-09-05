@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clickFragment">
+
+    <fragment
+        android:id="@+id/clickFragment"
+        android:name="com.cagudeloa.databindingviewmodel.Click.ClickFragment"
+        android:label="More clicks win"
+        tools:layout="@layout/fragment_click">
+        <action
+            android:id="@+id/action_clickFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.cagudeloa.databindingviewmodel.Score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
+</navigation>
