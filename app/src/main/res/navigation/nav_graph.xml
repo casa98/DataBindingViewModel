@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/clickFragment"
-        android:name="com.cagudeloa.databindingviewmodel.Click.ClickFragment"
+        android:name="com.cagudeloa.databindingviewmodel.click.ClickFragment"
         android:label="More clicks win"
         tools:layout="@layout/fragment_click">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
-        android:name="com.cagudeloa.databindingviewmodel.Score.ScoreFragment"
+        android:name="com.cagudeloa.databindingviewmodel.score.ScoreFragment"
         android:label="fragment_score"
         tools:layout="@layout/fragment_score" />
 </navigation>

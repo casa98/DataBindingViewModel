@@ -2,7 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Click.ClickFragment">
+    tools:context=".click.ClickFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.cagudeloa.databindingviewmodel.click.ClickViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
-            android:text="0"
+            android:text="@{viewModel.score.toString()}"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="get points"
+            android:onClick="@{() -> viewModel.getPoints()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/button2"
             app:layout_constraintEnd_toStartOf="@+id/button2"
             app:layout_constraintHorizontal_bias="0.5"
@@ -72,6 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:text="0"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
