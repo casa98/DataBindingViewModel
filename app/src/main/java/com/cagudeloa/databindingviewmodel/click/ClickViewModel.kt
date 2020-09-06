@@ -18,4 +18,8 @@ class ClickViewModel : ViewModel() {
         _score.value = (score.value)?.plus(1)
     }
 
+    fun endGame(){
+        _score.value = 0
+    }
+
 }
